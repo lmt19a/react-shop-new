@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    .py-2.5 {
+      padding-top: 1.5rem; /* Decrease top padding */
+      padding-bottom: 1.5rem; /* Decrease bottom padding */
+    }
+    .px-5 {
+      padding-left: 1rem; /* Decrease left padding */
+      padding-right: 1rem; /* Decrease right padding */
+    }
+    .logo {
+      font-size: 2.5rem; /* Decrease logo font size */
+    }
+  }
+  
