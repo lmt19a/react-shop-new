@@ -1,90 +1,43 @@
 import React, { useState } from 'react';
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
-import styled from 'styled-components';
-import { sliderItems } from '../data'; // Import sliderItems from data.js
-
-const Arrow = styled.div`
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    ${props => props.direction === "left" && "left: 10px;"}
-    ${props => props.direction === "right" && "right: 10px;"}
-    opacity: 0.5;
-    z-index: 2;
-`
-
-const Wrapper = styled.div`
-    display: flex;
-    height: 100%;
-    transition: all 1.5s ease;
-    transform: translateX(${props => props.slideIndex * -100}vw);
-`
-const Slide = styled.div`
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #${props => props.bg};
-`
-
-const ImgContainer = styled.div`
-    flex: 1;
-    height: 100%;
-`
-
-const InfoContainer = styled.div`
-    flex: 1;
-    padding: 50px;
-`
-
-const Image = styled.img`
-    width: 80%;
-`
-
-const Title = styled.h1`
-    font-size: 2rem;
-    color: #333;
-`
-
-const Desc = styled.p`
-    font-size: 1.2rem;
-    color: #555;
-`
+import { sliderItems } from '../data'; 
+import '../css/Slider.css';
 
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
+  
     const handleClick = (direction) => {
-        if (direction === "left") {
-            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length - 1);
-        } else {
-            setSlideIndex(slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0);
-        }
+      if (direction === "left") {
+        setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+      } else {
+        setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+      }
     };
-
+  
     return (
-        <div className='w-full h-screen flex relative overflow-hidden'>
-            <Arrow className='h-12 w-12 bg-zinc-200 rounded-full flex items-center justify-center' direction="left" onClick={() => handleClick("left")}>
-                <CaretLeftOutlined />
-            </Arrow>
-            <Wrapper className='h-full' slideIndex={slideIndex}>
-                {sliderItems.map(item => (
-                    <Slide key={item.id} bg={item.bg}>
-                        <ImgContainer>
-                            <Image src={item.img} alt="Image" />
-                        </ImgContainer>
-                        <InfoContainer>
-                            <Title className='text-7xl'>{item.title}</Title>
-                            <Desc className='mx-0 my-12 text-xl font-medium tracking-widest'>{item.desc}</Desc>
-                            <button className='text-xl p-4 bg-transparent border'>SHOW NOW</button>
-                        </InfoContainer>
-                    </Slide>
-                ))}
-            </Wrapper>
-            <Arrow className='h-12 w-12 bg-zinc-200 rounded-full flex items-center justify-center' direction="right" onClick={() => handleClick("right")}>
-                <CaretRightOutlined />
-            </Arrow>
+      <div className='container1'>
+        <div className='arrow left' onClick={() => handleClick("left")}>
+          <CaretLeftOutlined />
         </div>
-    )
-}
-
-export default Slider;
+        <div className='wrapper' style={{ transform: `translateX(${slideIndex * -100}vw)` }}>
+          {sliderItems.map((item) => (
+            <div className='slide' style={{ backgroundColor: `#${item.bg}` }} key={item.id}>
+              <div className='img-container'>
+                <img src={item.img} alt="Slide" className='image' />
+              </div>
+              <div className='info-container'>
+                <h1 className='title'>{item.title}</h1>
+                <p className='desc'>{item.desc}</p>
+                <button className='button'>SHOW NOW</button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className='arrow right' onClick={() => handleClick("right")}>
+          <CaretRightOutlined />
+        </div>
+      </div>
+    );
+  };
+  
+  export default Slider;

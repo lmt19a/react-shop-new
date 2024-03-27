@@ -4,7 +4,50 @@
     object-fit: cover;
 }
 
-.Title {
+.category-item-container {
+    height: 70vh;
+    position: relative;
+  }
+  
+  .Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .Info {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .category-item-container:hover .Info {
+    opacity: 1;
+  }
+  
+  .Title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     color: white;
     margin-bottom: 20px;
-}
+  }
+  
+  .Button {
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .category-item-container {
+      height: auto;
+      flex: 1 1 45%;
+      margin-bottom: 10px;
+    }
+  }

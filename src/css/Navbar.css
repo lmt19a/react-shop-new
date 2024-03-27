@@ -1,14 +1,33 @@
 @media only screen and (max-width: 768px) {
     .py-2.5 {
-      padding-top: 1.5rem; /* Decrease top padding */
-      padding-bottom: 1.5rem; /* Decrease bottom padding */
+      padding-top: 1.5rem; 
+      padding-bottom: 1.5rem; 
     }
     .px-5 {
-      padding-left: 1rem; /* Decrease left padding */
-      padding-right: 1rem; /* Decrease right padding */
-    }
+      padding-left: 1rem; 
+      padding-right: 1rem; 
     .logo {
-      font-size: 2.5rem; /* Decrease logo font size */
+      font-size: 2.5rem; 
+    }
+  }
+  }
+  @media (max-width: 768px) {
+    .SearchContainer {
+      display: none;
+    }
+  
+    .logo {
+      font-size: 2.5rem;
+    }
+  
+    .MenuItems {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .Language {
+      display: none;
     }
   }
   

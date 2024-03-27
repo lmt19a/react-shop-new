@@ -1,86 +1,24 @@
-import styled from "styled-components";
+import React from "react";
 import { ShoppingCartOutlined, SearchOutlined, HeartOutlined } from '@ant-design/icons';
-
-const Info = styled.div`
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-  cursor: pointer;
-`;
-
-const Container = styled.div`
-  flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  position: relative;
-
-  &:hover ${Info} {
-    opacity: 1;
-  }
-`;
-
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers its container */
-  z-index: 2;
-`;
-
-const Icon = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  transition: all 0.5s ease;
-  &:hover {
-    background-color: #e9f5f5;
-    transform: scale(1.1);
-  }
-`;
+import "../css/ListProduct.css"; 
 
 const Product = ({ item }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={item.img} />
-      <Info>
-        <Icon>
+    <div className="product-container">
+      <div className="circle"></div>
+      <img src={item.img} className="product-image" alt="Product" />
+      <div className="info">
+        <div className="icon">
           <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
+        </div>
+        <div className="icon">
           <SearchOutlined />
-        </Icon>
-        <Icon>
+        </div>
+        <div className="icon">
           <HeartOutlined />
-        </Icon>
-      </Info>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 

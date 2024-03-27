@@ -1,0 +1,27 @@
+.button {
+    background-color: bg-teal-500 !important;
+}
+@media screen and (max-width: 768px) {
+    .newsletter-container {
+      height: auto; 
+      padding: 1rem;
+    }
+  
+    .newsletter-heading {
+      font-size: 2rem;
+    }
+  
+    .newsletter-description {
+      font-size: 1.2rem;
+    }
+  
+    .input {
+      margin-right: 0; 
+      margin-bottom: 1rem; 
+      border-radius: 0.5rem; 
+    }
+  
+    .button {
+      border-radius: 0.5rem; 
+    }
+  }
