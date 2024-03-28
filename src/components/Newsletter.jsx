@@ -3,7 +3,7 @@ import "../css/Newletter.css"
 
 const Newsletter = () => {
   return (
-    <div className="newsletter-container flex flex-col items-center justify-center h-60v lg:h-auto bg-gray-100 py-8" style={{ backgroundColor: '#fcf5f5' }}>
+    <div className="newsletter-container flex flex-col items-center justify-center h-60v lg:h-auto bg-gray-100 py-8 mt-12" style={{ backgroundColor: '#fcf5f5' }}>
       <h1 className="newsletter-heading text-3xl lg:text-5xl font-bold mb-4">Newsletter</h1>
       <p className="newsletter-description text-lg lg:text-xl text-center mb-4">Get timely updates from your favorite products.</p>
       <div className="w-full lg:w-1/2 flex">

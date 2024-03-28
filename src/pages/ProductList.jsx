@@ -4,12 +4,20 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations"; // Corrected import
+
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+const FadeInDiv = styled.div`
+  animation: 1s ${fadeInAnimation};
+`;
 
 const ProductList = () => {
   return (
-    <div>
-      <Navbar />
+    <FadeInDiv>
       <Announcement />
+      <Navbar />
       <div className="mx-10 my-10">
         <h1 className="text-3xl font-semibold">Dresses</h1>
         <div className="flex flex-col lg:flex-row justify-between items-center my-5">
@@ -46,7 +54,7 @@ const ProductList = () => {
       </div>
       <Newsletter />
       <Footer />
-    </div>
+    </FadeInDiv>
   );
 };
 

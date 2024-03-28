@@ -1,85 +1,26 @@
 import React from "react";
-import styled from "styled-components";
-
-const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Wrapper = styled.div`
-  width: 30%;
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8); 
-  border-radius: 10px;
-`;
-
-const Title = styled.h1`
-  font-size: 32px;
-  font-weight: 500; 
-  margin-bottom: 20px;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Input = styled.input`
-  padding: 12px; 
-  margin-bottom: 20px;
-  border: 1px solid #ccc; 
-  border-radius: 5px;
-`;
-
-const Agreement = styled.span`
-  font-size: 12px;
-  margin-bottom: 20px;
-`;
-
-const Button = styled.button`
-  padding: 15px 20px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background-color: #008080; 
-  }
-`;
+import "../css/Register.css";
 
 const Register = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Title>CREATE AN ACCOUNT</Title>
-        <Form>
-          <Input placeholder="Name" />
-          <Input placeholder="Last Name" />
-          <Input placeholder="Username" />
-          <Input placeholder="Email" />
-          <Input placeholder="Password" />
-          <Input placeholder="Confirm Password" />
-          <Agreement>
+    <div className="container1">
+      <div className="wrapper">
+        <h1 className="title">CREATE AN ACCOUNT</h1>
+        <form className="form">
+          <input className="input" placeholder="Name" />
+          <input className="input" placeholder="Last Name" />
+          <input className="input" placeholder="Username" />
+          <input className="input" placeholder="Email" />
+          <input className="input" placeholder="Password" />
+          <input className="input" placeholder="Confirm Password" />
+          <span className="agreement">
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
-          <Button>CREATE</Button>
-        </Form>
-      </Wrapper>
-    </Container>
+          </span>
+          <button className="button">CREATE</button>
+        </form>
+      </div>
+    </div>
   );
 };
 

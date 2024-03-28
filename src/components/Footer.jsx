@@ -13,7 +13,7 @@ import '../css/Footer.css'
 const Footer = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row lg:gap-14">
         <div className="w-full lg:w-1/3 lg:mr-8 mb-8 lg:mb-0">
           <h1 className="text-2xl font-bold mb-4">LAMA.</h1>
           <p className="text-sm mb-4">
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         <div className="w-full lg:w-1/3 lg:mr-8 mb-8 lg:mb-0">
           <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
-          <ul className="grid grid-cols-2 gap-4 list-none">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 list-none">
             <li className="mb-2"><a href="#" className="text-gray-600 hover:text-black">Home</a></li>
             <li className="mb-2"><a href="#" className="text-gray-600 hover:text-black">Cart</a></li>
             <li className="mb-2"><a href="#" className="text-gray-600 hover:text-black">Man Fashion</a></li>

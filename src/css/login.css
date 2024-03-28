@@ -7,7 +7,49 @@
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)
   ),
-  url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+  url("https://static.zara.net/assets/public/4475/a223/efe74ebcb29b/60793e0a7cd5/48311073052-031-ult22/48311073052-031-ult22.jpg?ts=1711541423494&w=960")
   center;
   background-size: cover;
+}
+/* Định nghĩa các lớp CSS mới */
+.or-divider {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.or-text {
+  color: #999;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon-container:hover {
+  transform: scale(1.1);
+}
+.google-icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: #DB4437; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.google-icon-container:hover {
+  transform: scale(1.1);
 }
